@@ -1,0 +1,630 @@
+@charset "UTF-8";
+
+body, html{
+    margin-top: 7em;
+}
+
+/* Menu de navegação  */
+
+.navbar-nav .nav-link {
+    color: rgb(238, 117, 37) !important; /* !important força a aplicação da cor */
+    transition: color ease-in-out 0.5s;
+    
+  }
+
+.navbar .navbar-brand {
+    color: rgb(238, 117, 37) !important; /* Substitua 'red' pela cor desejada */
+    transition: color ease-in-out 0.5s;
+   
+  }
+
+
+.navbar-nav:hover .nav-link:hover {
+    color: black !important; /* !important força a aplicação da cor */
+    transition: 0.5s;
+
+  }
+ 
+.navbar:hover .navbar-brand:hover {
+    color: black !important; /* Substitua 'red' pela cor desejada */
+    transition: 0.5s;
+  }
+
+nav.navbar.fixed-top.bg-body-tertiary {
+    background-color: rgba(255, 255, 255, 0.897) !important; /* !important força a aplicação do estilo */
+}
+
+btn btn-outline-warning{
+    width: 100%;
+    flex-grow: 1;
+}
+
+ /* Carrosel  */ 
+
+ .carousel-inner img {
+    max-height: 500px; /* Ajuste o valor conforme necessário */
+    object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço */
+    margin-bottom: 10px;
+  }
+
+button a[href="login.htm"] {
+    color: orange;
+    text-decoration: none;
+    height: 50px;
+}
+
+#imgwhat{
+    position: absolute;
+    height: 50px;
+    margin-left: -15px;
+    margin-top: -10px;
+}
+button a[href="login.htm"]:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+button a[href="#"] {
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+    font-weight: bolder;
+}
+
+
+/* Area de Tratamento TEXTO */
+
+.titulo {
+    margin-top: 50px;
+    color: rgb(238, 117, 37);
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    margin-bottom: 30px;
+}
+
+
+.carrossel-item {
+    /* Estilos originais do carrossel-item */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.carrossel-item:hover {
+    transform: scale(1.10); /* Aumenta ligeiramente o tamanho do item */
+
+}
+
+.carrossel-item:hover .carrossel-descricao {
+    display: block; /* Mostra a descrição */
+}
+
+.carrossel-descricao {
+    display: none; /* Oculta a descrição por padrão */
+    /* Outros estilos para a descrição */
+}
+
+/* Area de Tratamento  */ 
+
+.carrossel-container {
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.carrossel {
+    overflow: hidden;
+}
+
+.carrossel-itens {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-item {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative; /* Necessário para posicionar o h3 */
+}
+
+.carrossel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carrossel-item h3 { /* Aplica o estilo a todos os h3 dentro de .carrossel-item */
+    position: absolute;
+    top: 127.5px;
+    width: 19.5em;
+    font-size: 1em;
+    background-color: rgba(238, 117, 37, 0.521);
+    color: white;
+    padding: 36px;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.carrossel-descricao {
+    text-align: center;
+}
+
+.carrossel-anterior,
+.carrossel-proximo {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carrossel-anterior:hover,
+.carrossel-proximo:hover {
+    color: rgb(238, 117, 37);
+
+}
+.carrossel-anterior {
+    left: 10px;
+}
+
+.carrossel-proximo {
+    right: 10px;
+}
+
+/* area de contato */
+
+
+.div-principal {
+    padding: 20px;
+    background-image: url(imagens/walpaper-parallax.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 800px; /* Use min-height para permitir que a div cresça */
+}
+
+.cntlocalizacao {
+    width: 35%; /* Ajuste a largura para porcentagem */
+    margin-left: 50%; /* Ajuste a margem para porcentagem */
+    margin-top: 15%; /* Ajuste a margem para porcentagem */
+}
+
+.imgg {
+    width: 35%; /* Ajuste a largura para porcentagem */
+    height: auto; /* Ajuste a altura para auto */
+    position: absolute; /* Use relative para posicionamento responsivo */
+    margin-top: 10%; /* Ajuste a margem para porcentagem */
+    margin-left: 10%; /* Ajuste a margem para porcentagem */
+    border-radius: 10px;
+}
+
+.pconteudo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    .cntlocalizacao {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 20%;
+    }
+
+    .imgg {
+
+            display: none;
+    }
+
+    .div-principal {
+        min-height: 600px;
+        background-attachment: scroll; /* Remove parallax em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .cntlocalizacao {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    .imgg {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+
+    .div-principal {
+        min-height: 400px;
+    }
+}
+
+/* Depoimentos */
+
+.item-tratamento img {
+    height: 50%;
+    margin-top: 50%;
+}
+
+.lista-tratamentos {
+    position: relative;
+    overflow: hidden;
+    width: 700px; /* Largura do carrossel */
+    margin: 0 auto;
+
+}
+
+.bloco-objetivos{
+    background-color: rgb(247, 247, 247);
+}
+
+.h1dp{
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 230px;
+    color: rgb(238, 117, 37);
+}
+
+
+.itens-tratamentos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item-tratamento {
+    min-width: 100%;
+}
+
+.botao-anterior,
+.botao-proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.botao-anterior {
+    left: 0;
+}
+
+.botao-proximo {
+    right: 0;
+}
+
+/* Tratamentos Recomendados  */
+
+.recomendadosh1 {
+  text-align: center;
+  margin: 2rem 0;
+  color: rgb(238, 117, 37);
+}
+
+.col-md-3 {
+  border: 1px solid rgb(206, 206, 206);
+  box-shadow: 3px 3px 3px rgb(206, 206, 206);
+  margin: 1rem auto;
+  min-height: 400px;
+  transition: all 0.5s ease-out;
+  padding: 10px;
+  position: relative;
+}
+
+.col-md-3:hover {
+  box-shadow: none;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+
+.img1 {
+  max-width: 100%;
+  height: auto;
+  margin-top: 5px;
+}
+
+.titulotrat {
+  font-size: 1.3em;
+  color: rgb(238, 117, 37);
+  margin-top: 20px;
+}
+
+.h2trat{
+    font-size: 1.4em;
+    margin-left: 65%;
+    margin-top: -20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc; /* Borda fina e cinza */
+    border-radius: 0; /* Remove o arredondamento */
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc; /* Borda fina e cinza */
+    border-radius: 0; /* Remove o arredondamento */
+}
+
+/* Media Queries */
+
+/* Telas menores (smartphones) */
+@media (max-width: 767px) {
+  .col-md-3 {
+    width: 90%; /* Ocupa quase toda a largura */
+    margin: 1rem auto; /* Centraliza */
+    min-height: auto; /* Altura automática */
+  }
+
+  .h2trat {
+    position: static; /* Remove o posicionamento absoluto */
+    text-align: right; /* Alinha à direita */
+    margin-top: 10px; /* Adiciona margem superior */
+  }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-3 {
+    width: 48%; /* Duas colunas em tablets */
+    min-height: auto;
+  }
+}
+
+ /* Depoimentos */
+
+#imgdp {
+    height: 5em;
+    width: 5em;
+    border-radius: 50px;
+    margin-left: 19.8em;
+    border: 3px solid rgb(241, 241, 241);
+    box-shadow: 3px 3px 3px rgb(206, 206, 206);
+    object-fit: cover;
+}
+
+.titulo-tratamento {
+    text-align: center;
+    font-weight: normal;
+    margin-top: 1em;
+    margin-left: 3em;
+    font-size: 1.3em;
+    width: 28em;
+    color: rgb(107, 107, 107);
+    white-space: normal; /* Permite quebra de linha */
+    word-break: break-word; /* Força a quebra de palavras longas */
+}
+
+.titulo-tratamentop {
+    text-align: center;
+    color: rgb(238, 117, 37);
+    margin-bottom: 10em;
+}
+
+.botao-anterior,
+.botao-proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    color: #aaa;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+}
+
+.botao-anterior {
+    left: 10px;
+}
+
+.botao-proximo {
+    right: 10px;
+}
+
+.botao-anterior:hover,
+.botao-proximo:hover {
+    color: rgb(238, 117, 37);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 767px) {
+    #imgdp {
+        margin-left: calc(50% - 2.5em);
+        width: 4em;
+        height: 4em;
+    }
+
+    .titulo-tratamento {
+        margin-left: 1em;
+        font-size: 1em;
+        width: 95%;
+    }
+
+    .titulo-tratamentop {
+        margin-bottom: 5em;
+    }
+
+    .botao-anterior {
+        left: 5px;
+        font-size: 1.5em;
+    }
+
+    .botao-proximo {
+        right: 5px;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #imgdp {
+        margin-left: calc(50% - 2.5em);
+    }
+
+    .titulo-tratamento {
+        margin-left: 2em;
+        font-size: 1.2em;
+        width: 85%;
+    }
+
+    .titulo-tratamentop {
+        margin-bottom: 7em;
+    }
+
+    .botao-anterior {
+        left: 10px;
+        font-size: 1.8em;
+    }
+
+    .botao-proximo {
+        right: 10px;
+        font-size: 1.8em;
+    }
+}
+
+
+
+/* Entre em contato */
+
+#seperatoria {
+    margin-bottom: 5rem;
+}
+
+.contatoh1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: rgb(238, 117, 37);
+}
+
+.endereco {
+    margin-left: 1rem;
+}
+
+.cabecalhoct {
+    display: flex;
+    margin-top: 1rem;
+    color: rgb(238, 117, 37);
+    font-weight: bold;
+}
+
+.redesct {
+    margin-left: 48%;
+}
+
+.redesct2 {
+    position: absolute;
+    margin-left: 25%;
+    margin-top: -7%;
+}
+
+.agendect {
+    font-size: 1.8em;
+    text-align: center;
+    color: rgb(238, 117, 37);
+}
+
+form {
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.divemail, .divcelular, .textareact, .divnome {
+    margin-top: 1rem;
+}
+
+
+/* Botão Fixo */
+.fixed-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column-reverse; /* Inverte a ordem para o texto ficar acima */
+    align-items: flex-end; /* Alinha os itens à direita */
+  }
+  
+  #fixedButton {
+    width: 70px;
+    height: 70px;
+    background-color: #13702f;
+    color: white;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    z-index: 10; /* Garante que o botão esteja acima do texto inicialmente */
+    transition: transform 1s ease, margin-bottom 1s ease; /* Transição suave para o hover */
+    border: 2px solid rgb(51, 214, 45);
+  }
+
+  #fixedButton:hover{
+    transition: 1s;
+    transform: scale(1.2);
+    position: absolute;
+    margin-bottom: 1em;
+  }
+  
+  #overlayText {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: none; /* Inicialmente escondido */
+    z-index: 9; /* Garante que o texto fique abaixo do botão inicialmente */
+  }
+
+/* Footer */
+
+footer {
+    margin-top: 10rem;
+}
+
+/* Media Queries */
+
+/* Telas menores (smartphones) */
+@media (max-width: 767px) {
+    .cabecalhoct {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+    }
+
+    .redesct {
+        margin-left: 0; /* Remove a margem */
+        margin-top: 1rem; /* Adiciona margem superior */
+    }
+
+    .redesct2 {
+        position: static; /* Remove o posicionamento absoluto */
+        margin-left: 0; /* Remove a margem */
+        margin-top: 1rem; /* Adiciona margem superior */
+    }
+
+    input, textarea {
+        width: 100%; /* Ocupa toda a largura */
+    }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Adicione estilos específicos para tablets aqui, se necessário */
+}
