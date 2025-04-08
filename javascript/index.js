@@ -73,15 +73,22 @@ botaoAnterior.addEventListener('click', () => {
     itensTratamentos.style.transform = `translateX(-${indice * 100}%)`;
 });
 
+// Botão Fixo
+
 document.addEventListener('DOMContentLoaded', function() {
     const fixedButton = document.getElementById('fixedButton');
     const overlayText = document.getElementById('overlayText');
+    const mainContent = document.getElementById('main-content'); // Elemento principal do site
   
     fixedButton.addEventListener('click', function() {
       if (overlayText.style.display === 'none' || overlayText.style.display === '') {
         overlayText.style.display = 'block';
+        mainContent.classList.add('blurred');
+        fixedButton.classList.add('focused'); // Adiciona classe de foco ao botão
       } else {
         overlayText.style.display = 'none';
+        mainContent.classList.remove('blurred');
+        fixedButton.classList.remove('focused'); // Remove classe de foco do botão
       }
     });
   });

@@ -182,7 +182,7 @@ button a[href="#"] {
 
 .div-principal {
     padding: 20px;
-    background-image: url(imagens/walpaper-parallax.jpg);
+    background-image: url(/imagens/walpaper-parallax.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -267,9 +267,10 @@ button a[href="#"] {
 }
 
 .h1dp{
+    font-size: 3em;
     position: absolute;
     margin-top: 200px;
-    margin-left: 230px;
+    margin-left: 220px;
     color: rgb(238, 117, 37);
 }
 
@@ -573,26 +574,113 @@ input, textarea {
     border-radius: 80px;
     cursor: pointer;
     z-index: 10; /* Garante que o botão esteja acima do texto inicialmente */
-    transition: transform 1s ease, margin-bottom 1s ease; /* Transição suave para o hover */
+    transition: transform 0.5s ease, margin-bottom 0.5s ease; /* Transição suave para o hover */
     border: 2px solid rgb(51, 214, 45);
   }
 
   #fixedButton:hover{
-    transition: 1s;
-    transform: scale(1.2);
+    transition: 0.5s;
+    transform: scale(1.1);
     position: absolute;
     margin-bottom: 1em;
   }
   
   #overlayText {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: black;
     padding: 10px;
+    width: 22em;
+    height: 18em;
     border-radius: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 12px;
     display: none; /* Inicialmente escondido */
     z-index: 9; /* Garante que o texto fique abaixo do botão inicialmente */
+    transition: box-shadow 0.5s ease; /* Transição suave para o efeito de sombra */
   }
+ 
+  .imgligue {
+    position: absolute;
+    width: 50px;
+    margin-left: -4.5em;
+  }
+
+ .imgwpp  {
+    position: absolute;
+    width: 50px;
+    margin-left: -4.5em;
+  }
+
+  #overlayText:hover {
+    transition: 0.5s;
+    box-shadow: -3px 3px 15px 3px rgb(170, 170, 170);
+  }
+
+  #main-content {
+    transition: filter 0.3s ease; /* Transição suave para o efeito de blur */
+  }
+  
+  .blurred {
+    filter: blur(5px); /* Ajuste o valor de blur conforme necessário */
+  }
+
+.btfixoligue > a {
+    text-decoration: none;
+    color: orange;
+
+}
+
+.btfixoligue{
+    padding: 15px;
+    transition: background-color 0.5s;
+}
+
+.btfixowpp{
+    padding: 15px;
+    transition: background-color 0.5s;
+}
+
+
+.btfixoligue:hover{
+    background-color: rgb(216, 211, 211);
+    transition: 0.5s;
+  
+}
+
+.btfixowpp:hover{
+    background-color: rgb(216, 211, 211);
+    transition: 0.5s;
+  
+}
+
+.fixoligue{
+    font-size: 1em;
+    margin-left: 6em;
+}
+
+.fixoligue2 {
+    font-size: 0.8em;
+    color: rgb(102, 100, 100);
+    margin-left: 7.5em;
+}
+
+.btfixowpp > a {
+    text-decoration: none;
+    color: orange;
+  
+
+}
+
+.fixowpp1{
+    font-size: 1em;
+    margin-left: 6em;
+}
+
+.fixowpp2{
+    font-size: 0.8em;
+    color: rgb(102, 100, 100);
+    margin-left: 7.5em;
+}
+
 
 /* Footer */
 
