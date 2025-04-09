@@ -1,2 +1,4 @@
 # Estetica_Exuberante
-Projeto real, desenvolvido para uma clinica de estética
+Projeto real, Que está sendo desenvolvido para uma clinica de estética.
+
+https://guilhermepereiraz.github.io/Estetica_Exuberante/

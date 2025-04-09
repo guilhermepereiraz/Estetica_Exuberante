@@ -78,17 +78,45 @@ botaoAnterior.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', function() {
     const fixedButton = document.getElementById('fixedButton');
     const overlayText = document.getElementById('overlayText');
-    const mainContent = document.getElementById('main-content'); // Elemento principal do site
+    const transp = document.getElementById('transp'); // Elemento principal do site
+    const imgx_fechar = document.getElementById('imgx_fechar'); // Elemento principal do site
+    const imgx_fechar2 = document.getElementById('imgx_fechar2'); // Elemento principal do site
+  
+    // Define a posição inicial do overlayText fora da tela e invisível
+    overlayText.style.position = 'absolute'; // Ou 'fixed', dependendo do layout
+    overlayText.style.top = '-100px'; // Ajuste conforme a altura do seu overlay
+    overlayText.style.left = '50%';
+    overlayText.style.transform = 'translateX(-50%)';
+    overlayText.style.opacity = '0';
+    overlayText.style.transition = 'top 0.3s ease-out, opacity 0.3s ease-out'; // Adiciona transição
   
     fixedButton.addEventListener('click', function() {
       if (overlayText.style.display === 'none' || overlayText.style.display === '') {
         overlayText.style.display = 'block';
-        mainContent.classList.add('blurred');
-        fixedButton.classList.add('focused'); // Adiciona classe de foco ao botão
+        transp.style.display = 'block';
+        imgx_fechar.style.display = 'block';
+        imgx_fechar2.style.display = 'none';
+  
+  
+        // Força um reflow para garantir que o browser registre o estado inicial
+        overlayText.offsetHeight;
+  
+        // Inicia a animação
+        overlayText.style.top = '-300px'; // Define a posição final desejada
+        overlayText.style.left = '-150px'; // Define a posição final desejada
+        overlayText.style.opacity = '1';
       } else {
-        overlayText.style.display = 'none';
-        mainContent.classList.remove('blurred');
-        fixedButton.classList.remove('focused'); // Remove classe de foco do botão
+        // Inicia a animação de saída
+        overlayText.style.top = '80px'; // Move para fora da tela
+        overlayText.style.opacity = '0';
+  
+        // Oculta o overlay após a transição
+        setTimeout(() => {
+          overlayText.style.display = 'none';
+          transp.style.display = 'none';
+          imgx_fechar2.style.display = 'block';
+          imgx_fechar.style.display = 'none';
+        }, 300); // Tempo igual à duração da transição
       }
     });
   });
