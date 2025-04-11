@@ -91,9 +91,10 @@ button a[href="#"] {
 }
 
 .carrossel-item:hover {
-    transform: scale(1.10); /* Aumenta ligeiramente o tamanho do item */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho do item */
 
 }
+
 
 .carrossel-item:hover .carrossel-descricao {
     display: block; /* Mostra a descrição */
@@ -209,6 +210,31 @@ button a[href="#"] {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.image-container {
+    position: relative; /* Necessário para posicionar as imagens sobrepostas */
+    display: inline-block; /* Ou outro tipo de display conforme necessário */
+  }
+  
+  .front-image {
+    display: block; /* Garante que a imagem ocupe o espaço */
+    width: auto; /* Ajuste conforme necessário */
+    height: auto; /* Ajuste conforme necessário */
+  }
+  
+  .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out; /* Adiciona uma transição suave */
+  }
+  
+  .image-container:hover .hover-image {
+    opacity: 1; /* Torna a imagem visível no hover */
+  }
 
 /* Media queries para telas menores */
 @media (max-width: 768px) {
@@ -398,6 +424,14 @@ textarea {
     box-shadow: 3px 3px 3px rgb(206, 206, 206);
     object-fit: cover;
 }
+
+#imgestrelas {
+    position: absolute;
+    height: 50px;
+    margin-top: 38em;
+    margin-left: -7em;
+}
+
 
 .titulo-tratamento {
     text-align: center;
@@ -589,7 +623,7 @@ input, textarea {
     border-radius: 5px;
     display: none; /* Inicialmente escondido */
     z-index: 9; /* Garante que o texto fique abaixo do botão inicialmente */
-    transition: box-shadow 0.5s ease; /* Transição suave para o efeito de sombra */
+
   }
  
   .imgligue {
@@ -605,7 +639,6 @@ input, textarea {
   }
 
   #overlayText:hover {
-    transition: 0.5s;
     box-shadow: -3px 3px 15px 3px rgb(90, 84, 84);
   }
 
