@@ -47,6 +47,7 @@ btn btn-outline-warning{
     margin-bottom: 10px;
   }
 
+
 button a[href="login.htm"] {
     color: orange;
     text-decoration: none;
@@ -77,12 +78,13 @@ button a[href="#"] {
 .titulo {
     margin-top: 50px;
     color: rgb(238, 117, 37);
-    margin-bottom: 20px;
+
 }
 
 .subtitulo {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #4b4b4b;
+
 }
 
 
@@ -152,7 +154,6 @@ button a[href="#"] {
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    z-index: 10;
 }
 
 .carrossel-anterior:hover,
@@ -871,7 +872,7 @@ textarea {
     height: 18em;
     border-radius: 5px;
     display: none; /* Inicialmente escondido */
-    z-index: 9; /* Garante que o texto fique abaixo do botão inicialmente */
+    z-index: 999; /* Garante que o texto fique abaixo do botão inicialmente */
 
   }
  
@@ -961,14 +962,106 @@ textarea {
 
 /* Div Transparente */
 
-#transp{
-    background-color: rgba(104, 103, 103, 0.719);
-    position: absolute;
-    padding: 30em;
-    margin-top: -323em;
-    width: 118.8em;
-    height: 323em;
-    display: none;
+#transp {
+  background-color: rgba(104, 103, 103, 0.719);
+  position: fixed; /* Use 'fixed' para cobrir toda a viewport */
+  top: 0;
+  left: 0;
+  width: 100%; /* Largura total da viewport */
+  height: 100%; /* Altura total da viewport */
+  display: none; /* Inicialmente escondido */
+  margin-top: 0; /* Remova a margem negativa grande */
+  padding: 0;     /* Remova o padding grande */
+}
+
+/* Imagem Flavia Inicio */
+
+#imgdd{
+  width: 35%;
+  margin-bottom: 1%;
+  margin-left: 60%;
+  z-index: 55;
+  margin-top: 5%;
+}
+
+#sobreflav{
+  background-color: #e0e4e6;
+  z-index: 54;
+  width: 75%;
+  height: 50em;
+  margin-top: -45em;
+}
+
+.quadradofla{
+  background-color: rgb(201, 196, 196);
+  z-index: 56;
+  width: 28%;
+  height: 20%;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 1%;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px 2px rgb(146, 145, 145);
+  transition: 1s;
+}
+
+.quadradofla:hover{
+  margin-top: 4%;
+  box-shadow: 1px 1px 1px 1px rgb(146, 145, 145);
+}
+
+.quadradofla2{
+  background-color: rgb(201, 196, 196);
+  box-shadow: 3px 3px 3px 2px rgb(146, 145, 145);
+  z-index: 56;
+  width: 28%;
+  height: 20%;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 31%;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+.quadradofla2:hover{
+  margin-top: 4%;
+  box-shadow: 1px 1px 1px 1px rgb(146, 145, 145);
+}
+
+.quadradofla3{
+  background-color: rgb(201, 196, 196);
+  box-shadow: 3px 3px 3px 2px rgb(146, 145, 145);
+  z-index: 56;
+  width: 28%;
+  height: 20%;
+  position: absolute;
+  margin-top: 30%;
+  margin-left: 31%;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+.quadradofla3:hover{
+  margin-top: 29%;
+  box-shadow: 1px 1px 1px 1px rgb(146, 145, 145);
+}
+
+.quadradofla4{
+  background-color: rgb(201, 196, 196);
+  box-shadow: 3px 3px 3px 2px rgb(146, 145, 145);
+  z-index: 56;
+  width: 28%;
+  height: 20%;
+  position: absolute;
+  margin-top: 30%;
+  margin-left: 1%;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+.quadradofla4:hover{
+  margin-top: 29%;
+  box-shadow: 1px 1px 1px 1px rgb(146, 145, 145);
 }
 
 
