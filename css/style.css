@@ -138,17 +138,6 @@ button a[href="#"] {
     border-radius: 10px;
 }
 
-.carrossel-item h3 { /* Aplica o estilo a todos os h3 dentro de .carrossel-item */
-    position: absolute;
-    top: 127.5px;
-    width: 19.5em;
-    font-size: 1em;
-    background-color: rgba(238, 117, 37, 0.521);
-    color: white;
-    padding: 36px;
-    z-index: 10;
-    border-radius: 10px;
-}
 
 .carrossel-descricao {
     text-align: center;
@@ -178,6 +167,57 @@ button a[href="#"] {
 .carrossel-proximo {
     right: 10px;
 }
+
+@media (max-width: 767px) {
+    .carrossel-container {
+      width: 95%; /* Aumenta a largura do container do carrossel */
+      margin-bottom: 20px; /* Reduz um pouco a margem inferior */
+    }
+  
+    .carrossel-item {
+      flex: 0 0 70%; /* Faz cada item ocupar uma largura maior */
+      padding: 15px; /* Aumenta um pouco o padding interno */
+      margin-right: 15px; /* Adiciona um pouco de margem entre os itens */
+    }
+  
+    .carrossel-item:last-child {
+      margin-right: 0; /* Remove a margem do último item */
+    }
+  
+    .carrossel-item img {
+      width: 100%; /* Garante que a imagem ocupe a largura do item */
+      height: auto;
+      border-radius: 8px; /* Pode ajustar o raio da borda */
+    }
+  
+    .carrossel-item h3 {
+      position: absolute;
+      top: auto; /* Remove o posicionamento fixo no topo */
+      bottom: 10px; /* Posiciona o texto na parte inferior */
+      width: calc(100% - 20px); /* Ajusta a largura do fundo do texto */
+      font-size: 1.1em; /* Aumenta um pouco o tamanho da fonte */
+      padding: 10px; /* Reduz o padding para caber melhor */
+      margin: 0 10px; /* Adiciona margem horizontal */
+      border-radius: 8px;
+      text-align: center; /* Centraliza o texto */
+    }
+  
+    .carrossel-anterior,
+    .carrossel-proximo {
+      font-size: 1.5rem; /* Reduz o tamanho dos botões se estiverem grandes demais */
+      top: auto; /* Remove o posicionamento fixo no topo */
+      bottom: 5px; /* Posiciona os botões na parte inferior */
+      transform: translateY(0); /* Remove a transformação vertical */
+    }
+  
+    .carrossel-anterior {
+      left: 5px;
+    }
+  
+    .carrossel-proximo {
+      right: 5px;
+    }
+  }
 
 /* area de contato */
 
@@ -276,43 +316,46 @@ button a[href="#"] {
 
 /* Depoimentos */
 
-.item-tratamento img {
-    height: 50%;
-    margin-top: 50%;
-}
-
-.lista-tratamentos {
+.bloco-objetivos {
+    background-color: rgb(247, 247, 247);
+    padding: 30px 20px;
+  }
+  
+  .lista-tratamentos {
     position: relative;
     overflow: hidden;
-    width: 700px; /* Largura do carrossel */
+    width: 700px; /* Largura original do carrossel */
     margin: 0 auto;
-
-}
-
-.bloco-objetivos{
-    background-color: rgb(247, 247, 247);
-}
-
-.h1dp{
+  }
+  
+  .h1dp {
     font-size: 3em;
     position: absolute;
     margin-top: 200px;
     margin-left: 220px;
     color: rgb(238, 117, 37);
-}
-
-
-.itens-tratamentos {
+  }
+  
+  .itens-tratamentos {
     display: flex;
     transition: transform 0.5s ease-in-out;
-}
-
-.item-tratamento {
+  }
+  
+  .item-tratamento {
     min-width: 100%;
-}
-
-.botao-anterior,
-.botao-proximo {
+  }
+  
+  .item-tratamento img {
+    height: 50%;
+    margin-top: 50%;
+    max-width: none; /* Removendo a limitação de largura para telas maiores */
+    display: block; /* Garante que a margem automática funcione */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .botao-anterior,
+  .botao-proximo {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -320,15 +363,101 @@ button a[href="#"] {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-}
-
-.botao-anterior {
+    font-size: 1.5em;
+  }
+  
+  .botao-anterior {
     left: 0;
-}
-
-.botao-proximo {
+  }
+  
+  .botao-proximo {
     right: 0;
-}
+  }
+  
+  /* Media Queries para telas médias (tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .lista-tratamentos {
+      width: 85%;
+      margin: 20px auto;
+    }
+  
+    .h1dp {
+      font-size: 2.5em;
+      position: static; /* Removendo o posicionamento absoluto */
+      text-align: center;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .item-tratamento img {
+      max-width: 50%;
+      height: auto;
+      margin: 15px auto;
+    }
+  
+    .botao-anterior,
+    .botao-proximo {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      bottom: 10px;
+      top: auto;
+      transform: translateY(0);
+    }
+  
+    .botao-anterior {
+      left: 10px;
+    }
+  
+    .botao-proximo {
+      right: 10px;
+    }
+  }
+  
+  /* Media Queries para telas pequenas (smartphones) */
+  @media (max-width: 767px) {
+    .bloco-objetivos {
+      padding: 20px 10px;
+      margin-top: 20px;
+    }
+  
+    .lista-tratamentos {
+      width: 98%;
+      margin: 15px auto;
+    }
+  
+    .h1dp {
+      font-size: 1.8em;
+      position: static; /* Removendo o posicionamento absoluto */
+      text-align: center;
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .item-tratamento img {
+      max-width: 80%;
+      height: auto;
+      margin: 10px auto;
+    }
+  
+    .botao-anterior,
+    .botao-proximo {
+      font-size: 1em;
+      padding: 8px 15px;
+      bottom: 5px;
+      top: auto;
+      transform: translateY(0);
+    }
+  
+    .botao-anterior {
+      left: 5px;
+    }
+  
+    .botao-proximo {
+      right: 5px;
+    }
+  }
 
 /* Tratamentos Recomendados  */
 
@@ -394,7 +523,7 @@ textarea {
 /* Telas menores (smartphones) */
 @media (max-width: 767px) {
   .col-md-3 {
-    width: 90%; /* Ocupa quase toda a largura */
+    width: 70%; /* Ocupa quase toda a largura */
     margin: 1rem auto; /* Centraliza */
     min-height: auto; /* Altura automática */
   }
@@ -420,7 +549,7 @@ textarea {
     height: 5em;
     width: 5em;
     border-radius: 50px;
-    margin-left: 19.8em;
+    margin-left: 20.5em;
     border: 3px solid rgb(241, 241, 241);
     box-shadow: 3px 3px 3px rgb(206, 206, 206);
     object-fit: cover;
@@ -510,7 +639,7 @@ textarea {
 
 @media (min-width: 768px) and (max-width: 991px) {
     #imgdp {
-        margin-left: calc(50% - 2.5em);
+        margin-left: calc(50% - 2.em);
     }
 
     .titulo-tratamento {
@@ -540,55 +669,174 @@ textarea {
 
 #seperatoria {
     margin-bottom: 5rem;
-}
-
-.contatoh1 {
+  }
+  
+  .contatoh1 {
     margin-bottom: 1rem;
     text-align: center;
     color: rgb(238, 117, 37);
-}
-
-.endereco {
+    font-size: 2.5em; /* Aumentando o tamanho da fonte para telas maiores */
+  }
+  
+  .endereco {
     margin-left: 1rem;
-}
-
-.cabecalhoct {
+  }
+  
+  .cabecalhoct {
     display: flex;
     margin-top: 1rem;
     color: rgb(238, 117, 37);
     font-weight: bold;
-}
+  }
+  
+  .pdife{
+    margin-top: 4%;
+  }
 
-.redesct {
-    margin-left: 48%;
-}
-
-.redesct2 {
+  .redesct {
+    position: absolute;
+    margin-top: 120px; /* ESTE ESTILO ESTAVA CAUSANDO O PROBLEMA EM TELAS GRANDES */
+  }
+  
+  .redesct2 {
     position: absolute;
     margin-left: 25%;
-    margin-top: -7%;
-}
-
-.agendect {
+    margin-top: 100px;
+  }
+  
+  .agendect {
     font-size: 1.8em;
     text-align: center;
     color: rgb(238, 117, 37);
-}
-
-form {
+    margin-bottom: 1rem; /* Adicionando margem inferior */
+  }
+  
+  form {
     text-align: center;
-}
-
-input, textarea {
+  }
+  
+  input,
+  textarea {
     width: 100%;
     padding: 1rem;
     border-radius: 5px;
-}
-
-.divemail, .divcelular, .textareact, .divnome {
+    font-size: 1em;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+  }
+  
+  .divemail,
+  .divcelular,
+  .textareact,
+  .divnome {
     margin-top: 1rem;
-}
-
+  }
+  
+  iframe {
+    width: 100%; /* Faz o iframe ocupar 100% da largura do container pai */
+    height: 300px; /* Define uma altura inicial */
+    border: 0;
+  }
+  
+  /* Estilos para telas grandes (desktop) - Acima de 992px */
+  @media (min-width: 992px) {
+    .col-md-6 {
+      display: flex; /* Habilita o Flexbox */
+      flex-direction: column; /* Organiza os itens em coluna */
+    }
+  
+    iframe {
+      order: 0; /* Mapa no topo */
+    }
+    
+  
+    .cabecalhoct:first-child { /* Seleciona o "Onde nos encontrar" */
+      order: 1;
+      text-align: left;
+    }
+  
+    .endereco {
+      order: 2; /* Endereço, telefone, email */
+      text-align: left;
+    }
+  
+    .cabecalhoct:last-child { /* Seleciona o "Redes Sociais" */
+      order: 3;
+      margin-left: 0; /* Removendo a margem esquerda problemática */
+      margin-top: 1rem;
+      display: block;
+      text-align: left;
+    }
+  
+    .redesct2 {
+      order: 4; /* Links de redes sociais */
+      position: static; /* Remove posicionamento absoluto */
+      margin-left: 1rem;
+      margin-top: 0.5rem;
+      text-align: left;
+    }
+  }
+  
+  /* Media Queries para telas médias (tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .contatoh1 {
+      font-size: 2.2em;
+    }
+  
+    .agendect {
+      font-size: 1.6em;
+    }
+  
+    iframe {
+      height: 250px; /* Reduz a altura do iframe em tablets */
+    }
+  
+    .redesct {
+      margin-left: 40%; /* Ajusta a posição em tablets */
+    }
+  
+    .redesct2 {
+      margin-left: 20%; /* Ajusta a posição em tablets */
+      margin-top: -9%; /* Ajusta a posição em tablets */
+    }
+  }
+  
+  /* Media Queries para telas pequenas (smartphones) */
+  @media (max-width: 767px) {
+    .contatoh1 {
+      font-size: 1.8em;
+    }
+  
+    .agendect {
+      font-size: 1.4em;
+    }
+  
+    iframe {
+      height: 200px;
+    }
+  
+    .cabecalhoct {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .redesct {
+      margin-left: 0;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+  
+    .redesct2 {
+      position: static;
+      margin-left: 0;
+      margin-top: 0;
+      text-align: left;
+    }
+  
+    .redesct2 p {
+      margin-bottom: 0.3rem;
+    }
+  }
 
 /* Botão Fixo */
 .fixed-button-container {

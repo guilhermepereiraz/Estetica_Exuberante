@@ -1,28 +1,45 @@
+// Carrosel principal
+
+const carrosselContainer = document.querySelector('.carrossel');
 const carrosselItens = document.querySelector('.carrossel-itens');
 const carrosselItensArray = Array.from(carrosselItens.children);
-const carrosselItemLargura = carrosselItensArray[0].offsetWidth;
+let carrosselItemLargura = carrosselItensArray[0].offsetWidth;
 let indiceAtual = 0;
-
-document.querySelector('.carrossel-anterior').addEventListener('click', () => {
-    indiceAtual--;
-    if (indiceAtual < 0) {
-        indiceAtual = carrosselItensArray.length - 4;
-    }
-    atualizarCarrossel();
-});
-
-document.querySelector('.carrossel-proximo').addEventListener('click', () => {
-    indiceAtual++;
-    if (indiceAtual > carrosselItensArray.length - 4) {
-        indiceAtual = 0;
-    }
-    atualizarCarrossel();
-});
+const totalItens = carrosselItensArray.length;
 
 function atualizarCarrossel() {
     carrosselItens.style.transform = `translateX(-${indiceAtual * carrosselItemLargura}px)`;
 }
 
+function navegar(direcao) {
+    const carrosselLarguraVisivel = carrosselContainer.offsetWidth;
+    const itensVisiveis = Math.floor(carrosselLarguraVisivel / carrosselItemLargura);
+
+    indiceAtual += direcao * itensVisiveis;
+
+    if (indiceAtual < 0) {
+        indiceAtual = totalItens - itensVisiveis;
+        // Se totalItens não for múltiplo de itensVisiveis, podemos ajustar para mostrar o final corretamente
+        if (indiceAtual < 0) indiceAtual = 0;
+    } else if (indiceAtual > totalItens - itensVisiveis) {
+        indiceAtual = 0;
+    }
+
+    atualizarCarrossel();
+}
+
+document.querySelector('.carrossel-anterior').addEventListener('click', () => {
+    navegar(-1);
+});
+
+document.querySelector('.carrossel-proximo').addEventListener('click', () => {
+    navegar(1);
+});
+
+window.addEventListener('resize', () => {
+    carrosselItemLargura = carrosselItensArray[0].offsetWidth;
+    atualizarCarrossel();
+});
 
 // Login - Cadastro
 function mostrarCadastro() {
