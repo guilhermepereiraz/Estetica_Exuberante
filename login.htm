@@ -11,7 +11,7 @@
         <img src="imagens/tela_login2.jpg" alt="Imagem de Login">
         <div id="formulario-container">
             <h3 class="login">Login</h3>
-            <form action="/login" method="post">
+            <form action="login.php" method="post">
                 <div>
                     <label for="email"></label>
                     <input type="email" id="email" name="email" placeholder="E-mail" required>
@@ -38,34 +38,34 @@
         <img src="imagens/tela_login2.jpg" alt="Imagem de Login">
         <div id="formulario-container2">
             <h2>Register</h2>
-            <form action="/cadastro" method="post">
+            <form action="cadastro.php" method="post">
                 <div>
                     <label for="email2"></label>
-                    <input type="email2" id="email2" name="email2" placeholder="E-mail" required>
+                    <input type="email" id="email2" name="email" placeholder="E-mail" required>
                 </div>
                 <div>
                     <label for="password2"></label>
-                    <input type="password" id="password2" name="password2" class="inputsn" placeholder="Passoword" required>
+                    <input type="password" id="password2" name="password" class="inputsn" placeholder="Password" required>
                 </div>
-
+    
                 <div>
                     <label for="password3"></label>
-                    <input type="password" id="password2" name="password3" class="inputsn" placeholder="Confirm Passoword" required>
+                    <input type="password" id="password3" name="confirm_password" class="inputsn" placeholder="Confirm Password" required>
                 </div>
-
+    
                 <div>
                     <label for="codigo"></label>
-                    <input type="text" id="codigo" name="codigo" class="inputsn" placeholder="Verifier code" required>
+                    <input type="text" id="codigo" name="codigo" class="inputsn" placeholder="Verifier Code" required>
                 </div>
                 <div class="checkbox-container2">
-                    <input type="checkbox" id="input112" name="saveLogin2">
-                    <label for="input12" class="label12">Save Login</label>
+                    <input type="checkbox" id="input112" name="saveLogin">
+                    <label for="input112" class="label12">Save Login</label>
                 </div>
                 <div class="checkbox-container2">
                     <input type="checkbox" id="input222" name="agreeTerms">
-                    <label for="input2" class="label12">I agree to the terms of the license</label>
+                    <label for="input222" class="label12">I agree to the terms of the license</label>
                 </div>
-                <button type="submit">Enter</button>
+                <button type="submit">Register</button>
             </form>
             <p class="cadstro2">Do you already have an account? <a href="#" onclick="mostrarLogin()">Enter here.</a></p>
         </div>
