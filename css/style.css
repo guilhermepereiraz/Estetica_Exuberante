@@ -75,19 +75,6 @@ button a[href="#"] {
 
 /* Area de Tratamento TEXTO */
 
-.titulo {
-    margin-top: 50px;
-    color: rgb(238, 117, 37);
-
-}
-
-.subtitulo {
-    margin-bottom: 40px;
-    color: #4b4b4b;
-
-}
-
-
 .carrossel-item {
     /* Estilos originais do carrossel-item */
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
@@ -976,94 +963,27 @@ textarea {
 
 /* Imagem Flavia Inicio */
 
-#imgdd{
-  width: 35%;
-  margin-bottom: 1%;
-  margin-left: 60%;
-  z-index: 55;
-  margin-top: 5%;
-}
-
-#sobreflav{
-  background-color: #e0e4e6;
-  z-index: 54;
-  width: 75%;
+.bloco-objetivos2 {
+  background-color: rgb(247, 247, 247);
+  padding: 30px 20px;
   height: 50em;
-  margin-top: -45em;
+  margin-bottom: 5em;
 }
 
-.quadradofla{
-  background-color: rgb(201, 196, 196);
-  z-index: 56;
-  width: 28%;
-  height: 20%;
-  position: absolute;
+.titulo {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #e9760bef;
   margin-top: 5%;
-  margin-left: 1%;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px 2px rgb(146, 145, 145);
-  transition: 1s;
 }
 
-.quadradofla:hover{
-  margin-top: 4%;
-  box-shadow: 1px 1px 1px 1px rgb(146, 145, 145);
-}
+.subtitulo {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
 
-.quadradofla2{
-  background-color: rgb(201, 196, 196);
-  box-shadow: 3px 3px 3px 2px rgb(146, 145, 145);
-  z-index: 56;
-  width: 28%;
-  height: 20%;
-  position: absolute;
-  margin-top: 5%;
-  margin-left: 31%;
-  border-radius: 20px;
-  transition: 1s;
 }
-
-.quadradofla2:hover{
-  margin-top: 4%;
-  box-shadow: 1px 1px 1px 1px rgb(146, 145, 145);
-}
-
-.quadradofla3{
-  background-color: rgb(201, 196, 196);
-  box-shadow: 3px 3px 3px 2px rgb(146, 145, 145);
-  z-index: 56;
-  width: 28%;
-  height: 20%;
-  position: absolute;
-  margin-top: 30%;
-  margin-left: 31%;
-  border-radius: 20px;
-  transition: 1s;
-}
-
-.quadradofla3:hover{
-  margin-top: 29%;
-  box-shadow: 1px 1px 1px 1px rgb(146, 145, 145);
-}
-
-.quadradofla4{
-  background-color: rgb(201, 196, 196);
-  box-shadow: 3px 3px 3px 2px rgb(146, 145, 145);
-  z-index: 56;
-  width: 28%;
-  height: 20%;
-  position: absolute;
-  margin-top: 30%;
-  margin-left: 1%;
-  border-radius: 20px;
-  transition: 1s;
-}
-
-.quadradofla4:hover{
-  margin-top: 29%;
-  box-shadow: 1px 1px 1px 1px rgb(146, 145, 145);
-}
-
 
 
 /* Footer */
