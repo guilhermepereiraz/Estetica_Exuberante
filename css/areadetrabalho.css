@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.ficha1{
+    padding: 15px;
+    font-size: 1.5em;
+    margin-left: 2%;
+    text-align: center;
+    transition: background-color ease-in 0.3s;
+}
+
+.ficha1:hover{
+    transition: 0.3s;
+    background-color: rgb(172, 169, 169);
+}

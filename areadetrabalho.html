@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo Bootstrap com Altura e Largura Total</title>
+    <link rel="stylesheet" href="/css/areadetrabalho.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/luZabbixW" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL9UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0v9j0" crossorigin="anonymous"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-color: rgb(121, 121, 121);
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row:nth-child(2) { /* Seleciona a segunda .row (a das divs laterais) */
+            flex-grow: 1;
+        }
+        .cabecalho {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+           
+        }
+        .esquerda {
+            background-color: #dadada;
+            padding: 15px;
+            height: 100%;
+            border-radius: 20px;
+            z-index: 2;
+            box-shadow: -2px -2px 10px 2px inset rgb(168, 167, 167);
+         
+       
+        }
+        .direita {
+            background-color: #ffffff;
+            padding: 15px;
+            height: 100%;
+            border-radius: 20px;
+            box-shadow: 0px 0px 1px 0px inset rgb(0, 0, 0);
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-12 cabecalho">
+            <h1>Area de Trabalho - Estetica Exuberante</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-3 esquerda">
+            <h1 style="text-align: center; margin-top: 10%; margin-bottom: 20%;">Fichas</h1>
+            <div class="ficha1">Ficha de Anamenesia</div>
+            <div class="ficha1">Ficha de Clientes</div>
+            <div class="ficha1">Ficha de Usuarios</div>
+            <div class="ficha1">Deslogar</div>
+        </div>
+        <div class="col-xs-12 col-md-9 direita">
+            Conteúdo da Direita (aproximadamente 75% em telas médias e maiores)
+        </div>
+    </div>
+</body>
+</html>
